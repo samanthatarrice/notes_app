@@ -2,8 +2,12 @@ $('.add-note').click(newSticky);
 
 $(document).on('keydown',(e) => {
   if(e.which === 13) {
+    if ($('textarea').val() === '') {
+      e.preventDefault();
+    } else {
     e.preventDefault();
     newSticky();
+    }
   }
 });
 

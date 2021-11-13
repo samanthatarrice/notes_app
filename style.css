@@ -33,9 +33,18 @@ h1 {
 }
 
 button.add-note {
-  width: 100px;
-  margin: 1rem auto;
-  
+  width: 120px;
+  margin: auto;
+  margin-top: 2rem;
+  background: linear-gradient(to right, rgb(187, 6, 78), rgb(230, 119, 163), rgb(143, 163, 242), rgb(11, 184, 247));
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  font-family: 'Quicksand', sans-serif;
+  padding: 7px;
+
 }
 
 .stickies {

@@ -1,24 +1,11 @@
-/*
-
-1. When user adds text and clicks on button:
-  - if there is no text, nothing happens (or alert)
-  - a new sticky note appears.
-  - the text that was added to the textarea field gets placed into sticky note.
-
-2. If the user wants to see more text inside of the sticky note, they can click on it to enlarge.
-  - The background becomes more gray
-  - The sticky note becomes a modal. Larger, and in the center of the screen.
-  - An X appears on the top of the note to close the modal.
-
-*/
-
-// $('i.far.fa-trash-alt').click(console.log('working'));
-
-
-
 $('.add-note').click(newSticky);
 
-// $('#new-note').val('');
+$(document).on('keydown',(e) => {
+  if(e.which === 13) {
+    e.preventDefault();
+    newSticky();
+  }
+});
 
 $(document).on('click', '.fa-trash-alt', function() {
   $(this).parent().remove();
@@ -56,8 +43,16 @@ function openModal() {
   });
 }
 
+/* STEPS:
 
+1. When user adds text and clicks on button:
+  - if there is no text, nothing happens (or alert)
+  - a new sticky note appears.
+  - the text that was added to the textarea field gets placed into sticky note.
 
-// function deleteSticky() {
-//   alert('working');
-// }
+2. If the user wants to see more text inside of the sticky note, they can click on it to enlarge.
+  - The background becomes more gray
+  - The sticky note becomes a modal. Larger, and in the center of the screen.
+  - An X appears on the top of the note to close the modal.
+
+*/

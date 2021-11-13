@@ -18,6 +18,8 @@
 
 $('.add-note').click(newSticky);
 
+// $('#new-note').val('');
+
 $(document).on('click', '.fa-trash-alt', function() {
   $(this).parent().remove();
 }) //needed to use .on instead of .click in order to access dynamically created elements from other functions
@@ -27,7 +29,7 @@ $(document).on('click', '.fa-search-plus', openModal);
 function newSticky() {
   const stickyContainer = $('<div class="sticky-container"></div>');
   const stickyImg = $('<img src="images/sticky-note.png" />');
-  const stickyPEl = $('<p></p>');
+  const stickyPEl = $('<p class="sticky-text"></p>');
   const trash = $('<i class="far fa-trash-alt"></i>');
   const enlarge = $('<i class="fas fa-search-plus"></i>');
   
@@ -46,6 +48,7 @@ function openModal() {
   $('body').append(modalBackground);
   modalBackground.append(modalContent);
   modalContent.append(close);
+  modalContent.append($("#new-note").val());
 
   $(document).on('click', '.fa-window-close', () => {
     modalBackground.css('display', 'none');

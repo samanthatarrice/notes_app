@@ -1,0 +1,27 @@
+/*
+
+1. When user adds text and clicks on button:
+  - if there is no text, nothing happens (or alert)
+  - a new sticky note appears.
+  - the text that was added to the textarea field gets placed into sticky note.
+
+2. If the user wants to see more text inside of the sticky note, they can click on it to enlarge.
+  - The background becomes more gray
+  - The sticky note becomes a modal. Larger, and in the center of the screen.
+  - An X appears on the top of the note to close the modal.
+
+*/
+
+$('.add-note').click(newSticky);
+
+function newSticky() {
+  const stickyContainer = $('<div class="sticky-container"></div>');
+  const stickyImg = $('<img src="images/sticky-note.png" />');
+  const stickyPEl = $('<p></p>');
+  // const delete = $('')
+  
+
+  $('.stickies').append(stickyContainer);
+  stickyContainer.append(stickyImg);
+  stickyContainer.append(stickyPEl.text($("#new-note").val()));
+}

@@ -28,6 +28,7 @@ h1 {
   font-family: 'Quicksand', sans-serif;
   font-size: 1.5rem;
   padding: 1rem;
+  height: 100px;
 }
 
 button.add-note {
@@ -50,7 +51,6 @@ button.add-note {
 
 .stickies img {
   width: 100%;
-  z-index: -1;
 }
 
 .sticky-container p {
@@ -69,5 +69,27 @@ button.add-note {
   left: 60px;
   font-size: 2.5rem;
   color: rgb(228, 122, 165);
-  z-index: 1;
+}
+
+
+@media screen and (max-width: 910px) {
+  .stickies {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  h1 {
+    padding: 0 2rem;
+  }
+  textarea#new-note {
+    width: 270px;
+    margin: 0 auto;
+  }
+  .new-note-container {
+    width: 300px;
+  }
+  .stickies {
+    width: 300px;
+  }
 }

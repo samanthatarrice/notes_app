@@ -1,11 +1,15 @@
 html {
   margin: 0;
   font-size: 10px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 h1 {
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 6rem;
+  font-family: 'Cookie', cursive;
+  color: #26b1e8;
+  margin-bottom: 1rem;
 }
 
 .new-note-container {
@@ -18,6 +22,12 @@ h1 {
 
 .new-note-container label {
   text-align: center;
+}
+
+#new-note {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
 
 button.add-note {
@@ -44,7 +54,7 @@ button.add-note {
 }
 
 .sticky-container p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   position: absolute;
   top: 40px;
   left: 60px;

@@ -40,6 +40,7 @@ button.add-note {
 
 .stickies img {
   width: 100%;
+  z-index: -1;
 }
 
 .sticky-container p {
@@ -48,6 +49,16 @@ button.add-note {
   top: 40px;
   left: 60px;
   width: 180px;
-  height: 100px;
+  height: 120px;
   overflow: hidden;
+  margin: 0 auto;
+}
+
+.fa-trash-alt {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  font-size: 2.5rem;
+  color: rgb(228, 122, 165);
+  z-index: 1;
 }

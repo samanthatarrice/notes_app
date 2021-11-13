@@ -14,14 +14,20 @@
 
 $('.add-note').click(newSticky);
 
+$('i.far.fa-trash-alt').click(console.log('working'));
+
 function newSticky() {
   const stickyContainer = $('<div class="sticky-container"></div>');
   const stickyImg = $('<img src="images/sticky-note.png" />');
   const stickyPEl = $('<p></p>');
-  // const delete = $('')
+  const trash = $('<i class="far fa-trash-alt"></i>');
   
-
   $('.stickies').append(stickyContainer);
   stickyContainer.append(stickyImg);
   stickyContainer.append(stickyPEl.text($("#new-note").val()));
+  stickyContainer.append(trash);
 }
+
+// function deleteSticky() {
+//   alert('working');
+// }

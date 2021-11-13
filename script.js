@@ -1,9 +1,19 @@
 $('.add-note').click(newSticky);
 
+$('.add-note').mousedown(() => {
+  $('.add-note').css('box-shadow', 'none');
+})
+
+$('.add-note').mouseup(() => {
+  $('.add-note').css('box-shadow', '5px 5px 5px rgba(0, 0, 0, 0.5)');
+})
+
+
 $(document).on('keydown',(e) => {
   if(e.which === 13) {
     if ($('textarea').val() === '') {
       e.preventDefault();
+      alert('Add a new note!');
     } else {
     e.preventDefault();
     newSticky();
@@ -18,6 +28,11 @@ $(document).on('click', '.fa-trash-alt', function() {
 $(document).on('click', '.fa-search-plus', openModal);
 
 function newSticky() {
+  if ($('textarea').val() === '') {
+    alert('Add a new note!');
+    e.preventDefault();
+  }
+
   const stickyContainer = $('<div class="sticky-container"></div>');
   const stickyImg = $('<img src="images/sticky-note.png" />');
   const stickyPEl = $('<p class="sticky-text"></p>');

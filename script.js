@@ -38,6 +38,7 @@ function newSticky() {
   stickyContainer.append(stickyPEl.text($("#new-note").val()));
   stickyContainer.append(trash);
   stickyContainer.append(enlarge);
+  $('#new-note').val('');
 }
 
 function openModal() {
@@ -48,7 +49,7 @@ function openModal() {
   $('body').append(modalBackground);
   modalBackground.append(modalContent);
   modalContent.append(close);
-  modalContent.append($("#new-note").val());
+  modalContent.append($(this).prev().prev().text());
 
   $(document).on('click', '.fa-window-close', () => {
     modalBackground.css('display', 'none');

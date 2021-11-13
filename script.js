@@ -22,16 +22,28 @@ $(document).ready(function(){
     $(this).parent().remove();
   }) //needed to use .on instead of .click in order to access dynamically created elements from other functions
 
+  $(document).on('click', '.fa-search-plus', function() {
+    const modalBackground = $('<div class="modal-background"></div>');
+    const modalContent = $('<div class="modal-content"></div>');
+    const close = $('<i class="fas fa-window-close"></i>');
+
+    $('body').append(modalBackground);
+    modalBackground.append(modalContent);
+    modalContent.append(close);
+  })  
+
   function newSticky() {
     const stickyContainer = $('<div class="sticky-container"></div>');
     const stickyImg = $('<img src="images/sticky-note.png" />');
     const stickyPEl = $('<p></p>');
     const trash = $('<i class="far fa-trash-alt"></i>');
+    const enlarge = $('<i class="fas fa-search-plus"></i>');
     
     $('.stickies').append(stickyContainer);
     stickyContainer.append(stickyImg);
     stickyContainer.append(stickyPEl.text($("#new-note").val()));
     stickyContainer.append(trash);
+    stickyContainer.append(enlarge);
   }
 
 })

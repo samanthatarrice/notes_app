@@ -67,6 +67,7 @@ button.add-note {
   width: 185px;
   height: 130px;
   overflow: hidden;
+  white-space: pre-wrap;
 }
 
 .fa-trash-alt {

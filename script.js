@@ -9,6 +9,7 @@ $('.add-note').mouseup(() => {
 })
 
 
+/* REMOVED TO ALLOW USER TO ADD LINE BREAKS TO NOTES:
 $(document).on('keydown',(e) => {
   if(e.which === 13) {
     if ($('textarea').val() === '') {
@@ -20,6 +21,8 @@ $(document).on('keydown',(e) => {
     }
   }
 });
+*/
+
 
 $(document).on('click', '.fa-trash-alt', function() {
   $(this).parent().remove();

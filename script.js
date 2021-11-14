@@ -41,7 +41,7 @@ function newSticky() {
   
   $('.stickies').append(stickyContainer);
   stickyContainer.append(stickyImg);
-  stickyContainer.append(stickyPEl.text($("#new-note").val()));
+  stickyContainer.append(stickyPEl.html($("#new-note").val()));
   stickyContainer.append(trash);
   stickyContainer.append(enlarge);
   $('#new-note').val('');
@@ -55,7 +55,7 @@ function openModal() {
   $('body').append(modalBackground);
   modalBackground.append(modalContent);
   modalContent.append(close);
-  modalContent.append($(this).prev().prev().text());
+  modalContent.append($(this).prev().prev().html());
 
   $(document).on('click', '.fa-window-close', () => {
     modalBackground.css('display', 'none');
